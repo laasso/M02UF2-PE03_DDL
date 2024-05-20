@@ -4,9 +4,7 @@ Aquest és un sistema de gestió per a un kebab, destinat a gestionar la seva ca
 
 ![MySQL](https://img.shields.io/badge/mysql-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white)
 [![GitHub issues](https://img.shields.io/github/issues/laasso/M02UF2-PE03_DDL)](https://github.com/laasso/M02UF2-PE03_DDL/issues)
-[![GitHub forks](https://img.shields.io/github/forks/laasso/M02UF2-PE03_DDL)](https://github.com/laasso/M02UF2-PE03_DDL/network)
-[![GitHub stars](https://img.shields.io/github/stars/laasso/M02UF2-PE03_DDL)](https://github.com/laasso/M02UF2-PE03_DDL/stargazers)
-[![GitHub license](https://img.shields.io/github/license/laasso/M02UF2-PE03_DDL)](https://github.com/laasso/M02UF2-PE03_DDL/blob/main/LICENSE)
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
 
 ## Descripció del Projecte
 
