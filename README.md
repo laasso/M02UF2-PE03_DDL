@@ -4,6 +4,7 @@ Aquest és un sistema de gestió per a un kebab, destinat a gestionar la seva ca
 
 ![MySQL](https://img.shields.io/badge/mysql-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white)
 
+
 ## Descripció del Projecte
 
 El nostre sistema consta del següent:
@@ -82,6 +83,8 @@ Les taules de la base de dades estan definides de la següent manera:
   - `telefon`: Telèfon del treballador
   - `adreca`: Adreça del treballador
   - `carrec`: Càrrec del treballador
+
+![GitHub Repo stars](https://img.shields.io/github/stars/:user/:repo)
 
 ## Instruccions d'Ús
 
