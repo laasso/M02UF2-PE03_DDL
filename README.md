@@ -2,7 +2,7 @@
 
 Aquest és un sistema de gestió per a un kebab, destinat a gestionar la seva carta, les reserves de taules, les comandes a domicili i la informació del personal.
 
-![MySQL](https://img.shields.io/badge/mysql-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white)
+![MySQL](https://img.shields.io/badge/DB-MySQL-blue?logo=mysql)
 [![GitHub issues](https://img.shields.io/github/issues/laasso/M02UF2-PE03_DDL)](https://github.com/laasso/M02UF2-PE03_DDL/issues)
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
 
