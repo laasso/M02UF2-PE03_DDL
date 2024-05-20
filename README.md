@@ -2,6 +2,8 @@
 
 Aquest és un sistema de gestió per a un kebab, destinat a gestionar la seva carta, les reserves de taules, les comandes a domicili i la informació del personal.
 
+![MySQL](https://img.shields.io/badge/mysql-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white)
+
 ## Descripció del Projecte
 
 El nostre sistema consta del següent:
