@@ -3,7 +3,10 @@
 Aquest és un sistema de gestió per a un kebab, destinat a gestionar la seva carta, les reserves de taules, les comandes a domicili i la informació del personal.
 
 ![MySQL](https://img.shields.io/badge/mysql-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white)
-
+[![GitHub issues](https://img.shields.io/github/issues/laasso/M02UF2-PE03_DDL)](https://github.com/laasso/M02UF2-PE03_DDL/issues)
+[![GitHub forks](https://img.shields.io/github/forks/laasso/M02UF2-PE03_DDL)](https://github.com/laasso/M02UF2-PE03_DDL/network)
+[![GitHub stars](https://img.shields.io/github/stars/laasso/M02UF2-PE03_DDL)](https://github.com/laasso/M02UF2-PE03_DDL/stargazers)
+[![GitHub license](https://img.shields.io/github/license/laasso/M02UF2-PE03_DDL)](https://github.com/laasso/M02UF2-PE03_DDL/blob/main/LICENSE)
 
 ## Descripció del Projecte
 
@@ -84,7 +87,7 @@ Les taules de la base de dades estan definides de la següent manera:
   - `adreca`: Adreça del treballador
   - `carrec`: Càrrec del treballador
 
-![GitHub Repo stars](https://img.shields.io/github/stars/:user/:repo)
+![Modelo Entidad-Relación](er.png)
 
 ## Instruccions d'Ús
 
@@ -106,4 +109,3 @@ Aquest projecte està sota la llicència [MIT](LICENSE).
 [![GitHub forks](https://img.shields.io/github/forks/laasso/M02UF2-PE03_DDL)](https://github.com/laasso/M02UF2-PE03_DDL/network)
 [![GitHub stars](https://img.shields.io/github/stars/laasso/M02UF2-PE03_DDL)](https://github.com/laasso/M02UF2-PE03_DDL/stargazers)
 [![GitHub license](https://img.shields.io/github/license/laasso/M02UF2-PE03_DDL)](https://github.com/laasso/M02UF2-PE03_DDL/blob/main/LICENSE)
-![Visites](https://visitor-badge.glitch.me/badge?page_id=laasso.M02UF2-PE03_DDL)
