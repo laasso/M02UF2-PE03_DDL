@@ -24,8 +24,7 @@ CREATE TABLE personal (
 
 -- Taula per a la llista negra (Blacklist)
 CREATE TABLE llista_negra (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    client_id INT,
+    client_id INT PRIMARY KEY,
     motiu VARCHAR(255),
     FOREIGN KEY (client_id) REFERENCES clients(id)
 );
@@ -81,7 +80,7 @@ CREATE TABLE reserves (
     client_id INT,
     mesa_id INT,
     assistencia BOOLEAN DEFAULT FALSE,
-    carta_id INT,
+    -- carta_id INT,
     FOREIGN KEY (client_id) REFERENCES clients(id),
     FOREIGN KEY (mesa_id) REFERENCES taules(id),
     FOREIGN KEY (carta_id) REFERENCES carta(id)
