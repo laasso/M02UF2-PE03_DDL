@@ -6,7 +6,7 @@ USE restaurant;
 CREATE TABLE clients (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nom VARCHAR(255),
-    telefon VARCHAR(20),
+    telefon VARCHAR(9),
     adreca VARCHAR(255)
 );
 
@@ -72,6 +72,17 @@ CREATE TABLE carta (
     inventari_id INT,
     FOREIGN KEY (inventari_id) REFERENCES inventari(id)
 );
+
+-- Taula per a relacionar la carta amb l'inventari
+CREATE TABLE carta_inventari_rel (
+    carta_id INT,
+    inventari_id INT,
+    PRIMARY KEY (carta_id, inventari_id),
+    FOREIGN KEY (carta_id) REFERENCES carta(id),
+    FOREIGN KEY (inventari_id) REFERENCES inventari(id)
+);
+
+
 -- Taula per a les taules
 CREATE TABLE taules (
     id INT AUTO_INCREMENT PRIMARY KEY,
