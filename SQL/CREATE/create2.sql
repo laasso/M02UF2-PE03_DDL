@@ -122,3 +122,14 @@ CREATE TABLE carta_horari_rel (
     FOREIGN KEY (carta_id) REFERENCES carta(id),
     FOREIGN KEY (horari_id) REFERENCES carta_horari(id)
 );
+
+CREATE TABLE detall_comandes (
+	id_tiquet INT,
+	id_producte INT,
+	quantitat_demanat INT,
+	preu INT,
+	PRIMARY KEY(id_tiquet, id_producte),
+	FOREIGN KEY (id_tiquet) REFERENCES tiquets(id),
+   	FOREIGN KEY (id_producte) REFERENCES inventari(id)
+);
+
