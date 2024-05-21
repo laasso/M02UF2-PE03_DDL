@@ -100,8 +100,7 @@ CREATE TABLE reserves (
     assistencia BOOLEAN DEFAULT FALSE,
     -- carta_id INT,
     FOREIGN KEY (client_id) REFERENCES clients(id),
-    FOREIGN KEY (mesa_id) REFERENCES taules(id),
-    FOREIGN KEY (carta_id) REFERENCES carta(id)
+    FOREIGN KEY (mesa_id) REFERENCES taules(id)
 );
 
 
@@ -112,7 +111,6 @@ CREATE TABLE comandes_domicili (
     temps_estimat TIME,
     valoracio_client INT,
     data_entrega TIMESTAMP,
-    FOREIGN KEY (client_id) REFERENCES clients(id),
     FOREIGN KEY (id) REFERENCES tiquets(id)
 );
 
