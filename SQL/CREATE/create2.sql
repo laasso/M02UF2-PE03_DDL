@@ -108,12 +108,12 @@ CREATE TABLE reserves (
 -- Taula per a les comandes a domicili
 CREATE TABLE comandes_domicili (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    client_id INT,
     adreca_entrega VARCHAR(255),
     temps_estimat TIME,
     valoracio_client INT,
     data_entrega TIMESTAMP,
-    FOREIGN KEY (client_id) REFERENCES clients(id)
+    FOREIGN KEY (client_id) REFERENCES clients(id),
+    FOREIGN KEY (id) REFERENCES tiquets(id)
 );
 
 
