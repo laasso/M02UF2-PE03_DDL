@@ -13,7 +13,7 @@ CREATE TABLE clients (
 -- Taula per al personal
 CREATE TABLE personal (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    dni VARCHAR(20),
+    dni CHAR(9),
     nom VARCHAR(255),
     cognom VARCHAR(255),
     email VARCHAR(255),
