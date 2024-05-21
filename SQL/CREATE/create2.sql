@@ -69,8 +69,7 @@ CREATE TABLE carta (
     nom_producte VARCHAR(255),
     preu DECIMAL(10,2),
     categoria VARCHAR(255),
-    inventari_id INT,
-    FOREIGN KEY (inventari_id) REFERENCES inventari(id)
+    inventari_id INT
 );
 
 -- Taula per a relacionar la carta amb l'inventari
