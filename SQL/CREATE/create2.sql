@@ -4,7 +4,7 @@ USE restaurant;
 
 -- Taula per als clients
 CREATE TABLE clients (
-    id INT AUTO_INCREMENT PRIMARY KEY,
+    dni CHAR(9) PRIMARY KEY,
     nom VARCHAR(255),
     telefon VARCHAR(13),
     adreca VARCHAR(255)
@@ -26,7 +26,7 @@ CREATE TABLE personal (
 CREATE TABLE llista_negra (
     client_id INT PRIMARY KEY,
     motiu VARCHAR(255),
-    FOREIGN KEY (client_id) REFERENCES clients(id)
+    FOREIGN KEY (client_id) REFERENCES clients(dni)
 );
 
 -- Taula per als tiquets
@@ -36,7 +36,7 @@ CREATE TABLE tiquets (
     treballador_id INT,
     preu_total DECIMAL(10,2),
     data_hora TIMESTAMP,
-    FOREIGN KEY (client_id) REFERENCES clients(id),
+    FOREIGN KEY (client_id) REFERENCES clients(dni),
     FOREIGN KEY (treballador_id) REFERENCES personal(id)
 );
 
@@ -98,7 +98,7 @@ CREATE TABLE reserves (
     mesa_id INT,
     assistencia BOOLEAN DEFAULT FALSE,
     -- carta_id INT,
-    FOREIGN KEY (client_id) REFERENCES clients(id),
+    FOREIGN KEY (client_id) REFERENCES clients(dni),
     FOREIGN KEY (mesa_id) REFERENCES taules(id)
 );
 
