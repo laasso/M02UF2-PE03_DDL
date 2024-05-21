@@ -6,7 +6,7 @@ USE restaurant;
 CREATE TABLE clients (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nom VARCHAR(255),
-    telefon VARCHAR(9),
+    telefon VARCHAR(13),
     adreca VARCHAR(255)
 );
 
@@ -17,7 +17,7 @@ CREATE TABLE personal (
     nom VARCHAR(255),
     cognom VARCHAR(255),
     email VARCHAR(255),
-    telefon VARCHAR(20),
+    telefon VARCHAR(13),
     adreca VARCHAR(255),
     carrec VARCHAR(50)
 );
