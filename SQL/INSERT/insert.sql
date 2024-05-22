@@ -46,4 +46,4 @@ INTO TABLE inventari
 FIELDS TERMINATED BY ',' ENCLOSED BY '"'
 LINES TERMINATED BY '\n'
 IGNORE 1 LINES
-(id,nom_producte,estoc,id_categoria);
+(id,nom_producte,estoc,preu,id_categoria);
