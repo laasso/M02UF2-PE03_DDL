@@ -24,7 +24,7 @@ CREATE TABLE personal (
 
 -- Taula per a la llista negra (Blacklist)
 CREATE TABLE llista_negra (
-    dni CHAR(9) PRIMARY KEY,
+    client_id CHAR(9) PRIMARY KEY,
     motiu VARCHAR(255),
     FOREIGN KEY (client_id) REFERENCES clients(dni)
 );
