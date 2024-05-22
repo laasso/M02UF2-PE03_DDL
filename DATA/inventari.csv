@@ -1,0 +1,129 @@
+id,nom_producte,estoc,id_categoria
+1,Ensalada Cesar,23,1
+2,Ensalada Mixta,15,1
+3,Ensalada Griega,20,1
+4,Ensalada de Pollo,18,1
+5,Ensalada de Atún,25,1
+6,Ensalada Caprese,22,1
+7,Ensalada de Quinoa,19,1
+8,Ensalada Waldorf,17,1
+9,Pollo Asado,30,2
+10,Costillas de Cerdo,25,2
+11,Chuletas de Cordero,15,2
+12,Solomillo de Ternera,12,2
+13,Filete de Cerdo,22,2
+14,Albóndigas de Ternera,18,2
+15,Entrecot de Buey,10,2
+16,Pechuga de Pavo,20,2
+17,Gambas al Ajillo,18,3
+18,Mejillones al Vapor,22,3
+19,Calamares a la Romana,20,3
+20,Paella de Marisco,10,3
+21,Pulpo a la Gallega,15,3
+22,Arroz Negro,12,3
+23,Cocktail de Mariscos,14,3
+24,Lubina a la Sal,8,3
+25,Espaguetis Carbonara,20,4
+26,Macarrones con Queso,15,4
+27,Lasaña Boloñesa,12,4
+28,Fettuccine Alfredo,18,4
+29,Raviolis de Espinacas,14,4
+30,Penne all'Arrabbiata,16,4
+31,Tortellini de Carne,10,4
+32,Canelones de Pollo,12,4
+33,Pizza Margherita,30,5
+34,Pizza Pepperoni,28,5
+35,Pizza Cuatro Quesos,25,5
+36,Pizza Hawaiana,22,5
+37,Pizza Vegetariana,20,5
+38,Pizza Barbacoa,18,5
+39,Pizza de Atún,15,5
+40,Pizza de Jamón,12,5
+41,Kebab de Pollo,12,6
+42,Kebab de Ternera,10,6
+43,Kebab Vegetal,8,6
+44,Durum de Pollo,14,6
+45,Durum de Ternera,11,6
+46,Kebab Mixto,9,6
+47,Shawarma,13,6
+48,Falafel,15,6
+49,Patatas Bravas,25,7
+50,Croquetas de Jamón,18,7
+51,Calamares a la Romana,15,7
+52,Empanadillas de Atún,20,7
+53,Nachos con Queso,22,7
+54,Palitos de Mozzarella,18,7
+55,Mini Hamburguesas,12,7
+56,Alitas de Pollo,16,7
+57,Mojito,35,8
+58,Margarita,30,8
+59,Piña Colada,25,8
+60,Tequila Sunrise,22,8
+61,Daikiri de Fresa,28,8
+62,Cosmopolitan,24,8
+63,Manhattan,20,8
+64,Martini,18,8
+65,Tarta de Chocolate,20,9
+66,Flan de Huevo,22,9
+67,Tiramisu,18,9
+68,Helado de Vainilla,25,9
+69,Brownie,15,9
+70,Panna Cotta,12,9
+71,Cheesecake,10,9
+72,Profiteroles,8,9
+73,Agua Mineral,40,10
+74,Refresco de Cola,38,10
+75,Zumo de Naranja,35,10
+76,Cerveza,45,10
+77,Vino Tinto,25,10
+78,Vino Blanco,20,10
+79,Refresco de Limón,30,10
+80,Tónica,22,10
+81,Café Espresso,50,11
+82,Café con Leche,45,11
+83,Café Americano,30,11
+84,Cappuccino,35,11
+85,Café Mocha,28,11
+86,Café Latte,32,11
+87,Carajillo,20,11
+88,Mocaccino,25,11
+89,Hamburguesa Clásica,20,12
+90,Hamburguesa BBQ,18,12
+91,Hamburguesa de Pollo,15,12
+92,Hamburguesa Vegana,12,12
+93,Hamburguesa con Queso,14,12
+94,Hamburguesa Doble,10,12
+95,Hamburguesa de Pavo,8,12
+96,Hamburguesa Picante,9,12
+97,Tostada con Tomate,15,13
+98,Tostada con Aguacate,12,13
+99,Tostada con Jamón,10,13
+100,Tostada con Mermelada,8,13
+101,Tostada Francesa,11,13
+102,Tostada con Huevo,13,13
+103,Tostada con Mantequilla,9,13
+104,Tostada con Queso,14,13
+105,Bocadillo de Jamón Caliente,10,14
+106,Bocadillo de Queso Fundido,8,14
+107,Bocadillo de Pollo,12,14
+108,Bocadillo de Lomo,14,14
+109,Bocadillo de Tortilla,16,14
+110,Bocadillo de Bacon,15,14
+111,Bocadillo de Atún,18,14
+112,Bocadillo de Pavo,20,14
+113,Bocadillo de Atún,14,15
+114,Bocadillo de Jamón y Queso,16,15
+115,Bocadillo Vegetal,10,15
+116,Bocadillo de Tortilla,12,15
+117,Bocadillo de Huevo,14,15
+118,Bocadillo de Ensalada,9,15
+119,Bocadillo de Queso Fresco,13,15
+120,Bocadillo de Tomate,11,15
+121,Plato Combinado de Pollo,10,16
+122,Plato Combinado de Ternera,12,16
+123,Plato Combinado de Cerdo,15,16
+124,Plato Combinado de Pescado,8,16
+125,Plato Combinado de Ensalada,14,16
+126,Plato Combinado de Vegetales,16,16
+127,Plato Combinado de Patatas,12,16
+128,Plato Combinado de Arroz,10,16
