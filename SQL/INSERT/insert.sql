@@ -67,3 +67,22 @@ IGNORE 1 LINES
 INSERT INTO carta (id, nom_carta)
 SELECT id_carta, nom_carta
 FROM temp_carta;
+
+-- Insertar datos en tabla horario sin repeticion
+
+CREATE TABLE horario (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(255) UNIQUE
+);
+
+INSERT INTO horario (nombre)
+SELECT DISTINCT SUBSTRING_INDEX(SUBSTRING_INDEX(horari, '-', numbers.n), '-', -1) AS nombre
+FROM temp_carta
+JOIN (SELECT 1 AS n UNION ALL SELECT 2 UNION ALL SELECT 3 UNION ALL SELECT 4) numbers
+ON CHAR_LENGTH(horari) - CHAR_LENGTH(REPLACE(horari, '-', '')) >= numbers.n - 1;
+
+-- Para ordenar los valores y darles un ID único
+INSERT INTO horari (nom_horari)
+SELECT DISTINCT nombre
+FROM horario
+ORDER BY nombre;

@@ -43,7 +43,7 @@ CREATE TABLE tiquets (
 -- Taula per als horaris de les cartes
 CREATE TABLE horari (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    nom_horari VARCHAR(255),
+    nom_horari VARCHAR(255) UNIQUE,
     hora_inici TIME,
     hora_fi TIME
 );
