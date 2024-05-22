@@ -41,9 +41,9 @@ CREATE TABLE tiquets (
 );
 
 -- Taula per als horaris de les cartes
-CREATE TABLE carta_horari (
+CREATE TABLE horari (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    nom_carta VARCHAR(255),
+    nom_horari VARCHAR(255),
     hora_inici TIME,
     hora_fi TIME
 );
@@ -117,7 +117,7 @@ CREATE TABLE carta_horari_rel (
     horari_id INT,
     PRIMARY KEY (carta_id, horari_id),
     FOREIGN KEY (carta_id) REFERENCES carta(id),
-    FOREIGN KEY (horari_id) REFERENCES carta_horari(id)
+    FOREIGN KEY (horari_id) REFERENCES horari(id)
 );
 
 CREATE TABLE detall_comandes (
