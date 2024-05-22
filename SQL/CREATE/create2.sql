@@ -5,7 +5,7 @@ USE restaurant;
 -- Taula per als clients
 CREATE TABLE clients (
     dni CHAR(9) PRIMARY KEY,
-    nom VARCHAR(255),
+    nom VARCHAR(30),
     telefon VARCHAR(13),
     adreca VARCHAR(255)
 );
@@ -14,13 +14,13 @@ CREATE TABLE clients (
 CREATE TABLE personal (
     id INT AUTO_INCREMENT PRIMARY KEY,
     dni CHAR(9),
-    nom VARCHAR(255),
-    cognom VARCHAR(255),
-    email VARCHAR(255),
+    nom VARCHAR(30),
+    cognom VARCHAR(30),
+    email VARCHAR(150),
     telefon VARCHAR(13),
     adreca VARCHAR(255),
-    carrec VARCHAR(50)
-);
+    carrec ENUM('Gerent','Cambrer', 'Neteja', 'Repartidor', 'Cuiner')
+    );
 
 -- Taula per a la llista negra (Blacklist)
 CREATE TABLE llista_negra (
@@ -43,7 +43,7 @@ CREATE TABLE tiquets (
 -- Taula per als horaris de les cartes
 CREATE TABLE horari (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    nom_horari VARCHAR(255) UNIQUE,
+    nom_horari VARCHAR(20) UNIQUE,
     hora_inici TIME,
     hora_fi TIME
 );
@@ -51,13 +51,13 @@ CREATE TABLE horari (
 -- Taula per a les categories
 CREATE TABLE categoria (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    nom_categoria VARCHAR(255)
+    nom_categoria VARCHAR(30)
 );
 
 -- Taula per a l'inventari
 CREATE TABLE inventari (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    nom_producte VARCHAR(255),
+    nom_producte VARCHAR(50),
     estoc INT,
     preu DECIMAL(4,2),
     id_categoria INT,
@@ -67,7 +67,7 @@ CREATE TABLE inventari (
 -- Taula per a la carta
 CREATE TABLE carta (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    nom_carta VARCHAR(255)
+    nom_carta VARCHAR(40)
 );
 
 -- Taula per a relacionar la carta amb l'inventari
