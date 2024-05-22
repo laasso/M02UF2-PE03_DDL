@@ -67,7 +67,7 @@ CREATE TABLE inventari (
 -- Taula per a la carta
 CREATE TABLE carta (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    nom_carta VARCHAR(255),
+    nom_carta VARCHAR(255)
 );
 
 -- Taula per a relacionar la carta amb l'inventari
