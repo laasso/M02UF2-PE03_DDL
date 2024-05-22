@@ -103,3 +103,5 @@ WHERE nom_horari = 'migdia';
 UPDATE horari
 SET hora_inici = '20:00:00', hora_fi = '01:00:00'
 WHERE nom_horari = 'nit';
+
+DELETE FROM horari where nom_horari = NULL;
