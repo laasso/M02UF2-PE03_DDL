@@ -47,3 +47,23 @@ FIELDS TERMINATED BY ',' ENCLOSED BY '"'
 LINES TERMINATED BY '\n'
 IGNORE 1 LINES
 (id,nom_producte,estoc,preu,id_categoria);
+
+-- Crear la tabla temporal
+CREATE TABLE temp_carta (
+    id_carta INT,
+    nom_carta VARCHAR(255),
+    horari VARCHAR(255)
+);
+
+-- Cargar el archivo CSV en la tabla temporal
+LOAD DATA LOCAL INFILE '/home/lasso/M02UF2-PE03_DDL/DATA/carta.csv'
+INTO TABLE temp_carta
+FIELDS TERMINATED BY ','
+LINES TERMINATED BY '\n'
+IGNORE 1 LINES
+(id_carta, nom_carta, horari);
+
+-- Insertar datos en la tabla carta
+INSERT INTO carta (id, nom_carta)
+SELECT id_carta, nom_carta
+FROM temp_carta;
