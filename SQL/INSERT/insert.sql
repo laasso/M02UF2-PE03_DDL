@@ -32,3 +32,18 @@ LINES TERMINATED BY '\n'
 IGNORE 1 LINES
 (id,quantitat_persones,data,hora,client_id,taula_id,assistencia);
 
+-- Insert Categories
+LOAD DATA LOCAL INFILE '/home/lasso/M02UF2-PE03_DDL/DATA/categories.csv'
+INTO TABLE categoria
+FIELDS TERMINATED BY ',' ENCLOSED BY '"'
+LINES TERMINATED BY '\n'
+IGNORE 1 LINES
+(id,nom_categoria);
+
+-- Insert Inventari
+LOAD DATA LOCAL INFILE '/home/lasso/M02UF2-PE03_DDL/DATA/inventari.csv'
+INTO TABLE inventari
+FIELDS TERMINATED BY ',' ENCLOSED BY '"'
+LINES TERMINATED BY '\n'
+IGNORE 1 LINES
+(id,nom_producte,estoc,id_categoria);
