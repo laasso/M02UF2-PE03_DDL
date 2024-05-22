@@ -96,7 +96,7 @@ CREATE TABLE reserves (
     hora TIME,
     client_id CHAR(9),
     taula_id INT,
-    assistencia TINYINT(1),
+    assistencia ENUM('0', '1'),
     FOREIGN KEY (client_id) REFERENCES clients(dni),
     FOREIGN KEY (taula_id) REFERENCES taules(id)
 );
