@@ -24,7 +24,7 @@ CREATE TABLE personal (
 
 -- Taula per a la llista negra (Blacklist)
 CREATE TABLE llista_negra (
-    client_id INT PRIMARY KEY,
+    dni CHAR(9) PRIMARY KEY,
     motiu VARCHAR(255),
     FOREIGN KEY (client_id) REFERENCES clients(dni)
 );
@@ -32,7 +32,7 @@ CREATE TABLE llista_negra (
 -- Taula per als tiquets
 CREATE TABLE tiquets (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    client_id INT,
+    client_id CHAR(9),
     treballador_id INT,
     preu_total DECIMAL(10,2),
     data_hora TIMESTAMP,
@@ -94,7 +94,7 @@ CREATE TABLE reserves (
     quantitat_persones INT,
     data DATE,
     hora TIME,
-    client_id INT,
+    client_id CHAR(9),
     taula_id INT,
     assistencia BOOLEAN DEFAULT FALSE,
     FOREIGN KEY (client_id) REFERENCES clients(dni),
