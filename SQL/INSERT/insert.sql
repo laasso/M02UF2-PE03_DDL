@@ -1,3 +1,5 @@
+
+
 LOAD DATA LOCAL INFILE '/home/lasso/M02UF2-PE03_DDL/DATA/personal.csv'
 INTO TABLE personal
 FIELDS TERMINATED BY ',' ENCLOSED BY '"'
