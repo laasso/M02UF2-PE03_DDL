@@ -91,7 +91,7 @@
         client_id INT,
         adreca_entrega VARCHAR(255),
         temps_estimat TIME,
-        valoracio_client INT,
+        valoracio_client INT CHECK (valoracio_client BETWEEN 1 AND 5),
         data_entrega TIMESTAMP,
         FOREIGN KEY (client_id) REFERENCES clients(id)
     );
