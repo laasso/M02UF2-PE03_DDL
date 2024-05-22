@@ -59,6 +59,7 @@ CREATE TABLE inventari (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nom_producte VARCHAR(255),
     estoc INT,
+    preu DECIMAL(4,2),
     id_categoria INT,
     FOREIGN KEY (id_categoria) REFERENCES categoria(id)
 );
@@ -66,10 +67,7 @@ CREATE TABLE inventari (
 -- Taula per a la carta
 CREATE TABLE carta (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    nom_producte VARCHAR(255),
-    preu DECIMAL(10,2),
-    categoria VARCHAR(255),
-    inventari_id INT
+    nom_carta VARCHAR(255),
 );
 
 -- Taula per a relacionar la carta amb l'inventari
