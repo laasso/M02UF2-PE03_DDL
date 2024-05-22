@@ -1,0 +1,4 @@
+/home/lasso/M02UF2-PE03_DDL/SCRIPTS/myenv
+*.pyc
+__pycache__/
+myenv/
