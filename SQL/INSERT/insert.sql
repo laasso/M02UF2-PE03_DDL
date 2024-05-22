@@ -23,3 +23,12 @@ FIELDS TERMINATED BY ',' ENCLOSED BY '"'
 LINES TERMINATED BY '\n'
 IGNORE 1 LINES
 (dni,nom,telefon,adreca);
+
+-- Insert Reserves
+LOAD DATA LOCAL INFILE '/home/lasso/M02UF2-PE03_DDL/DATA/reserves.csv'
+INTO TABLE reserves
+FIELDS TERMINATED BY ',' ENCLOSED BY '"'
+LINES TERMINATED BY '\n'
+IGNORE 1 LINES
+(id,quantitat_persones,data,hora,client_id,taula_id,assistencia);
+
