@@ -95,11 +95,10 @@ CREATE TABLE reserves (
     data DATE,
     hora TIME,
     client_id INT,
-    mesa_id INT,
+    taula_id INT,
     assistencia BOOLEAN DEFAULT FALSE,
-    -- carta_id INT,
     FOREIGN KEY (client_id) REFERENCES clients(dni),
-    FOREIGN KEY (mesa_id) REFERENCES taules(id)
+    FOREIGN KEY (taula_id) REFERENCES taules(id)
 );
 
 
