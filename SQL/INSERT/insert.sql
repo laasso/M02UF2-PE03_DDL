@@ -91,10 +91,10 @@ ORDER BY nombre;
 
 -- Matins
 INSERT INTO horari (hora_inici,hora_fi)
-SELECT '08:00' AS hora_inici,'12:00' as hora_fi WHERE nom_horari = 'matins';
+SELECT '08:00' AS hora_inici,'12:00' as hora_fi FROM horari WHERE nom_horari = 'matins';
 -- Migdia
 INSERT INTO horari (hora_inici,hora_fi)
-SELECT '12:00' AS hora_inici,'16:00' as hora_fi WHERE nom_horari = 'migdia';
+SELECT '12:00' AS hora_inici,'16:00' as hora_fi FROM horari WHERE nom_horari = 'migdia';
 -- Nits
 INSERT INTO horari (hora_inici,hora_fi)
-SELECT '20:00' AS hora_inici,'01:00' as hora_fi WHERE nom_horari = 'nit';
+SELECT '20:00' AS hora_inici,'01:00' as hora_fi FROM horari WHERE nom_horari = 'nit';
