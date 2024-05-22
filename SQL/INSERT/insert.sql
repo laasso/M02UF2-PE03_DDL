@@ -86,3 +86,15 @@ INSERT INTO horari (nom_horari)
 SELECT DISTINCT nombre
 FROM horario
 ORDER BY nombre;
+
+-- Inserts en horari (hora_inici i hora_fi)
+
+-- Matins
+INSERT INTO horari (hora_inici,hora_fi)
+SELECT '08:00' AS hora_inici,'12:00' as hora_fi WHERE nom_horari = 'matins';
+-- Migdia
+INSERT INTO horari (hora_inici,hora_fi)
+SELECT '12:00' AS hora_inici,'16:00' as hora_fi WHERE nom_horari = 'migdia';
+-- Nits
+INSERT INTO horari (hora_inici,hora_fi)
+SELECT '20:00' AS hora_inici,'01:00' as hora_fi WHERE nom_horari = 'nit';
