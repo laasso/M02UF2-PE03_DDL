@@ -25,7 +25,7 @@ CREATE TABLE personal (
 CREATE TABLE llista_negra (
     client_id CHAR(9) PRIMARY KEY,
     motiu VARCHAR(255),
-    FOREIGN KEY (client_id) REFERENCES clients(dni)
+    FOREIGN KEY (client_id) REFERENCES clients(dni) ON DELETE NO ACTION ON UPDATE CASCADE
 );
 
 -- Taula per als tiquets
@@ -35,8 +35,8 @@ CREATE TABLE tiquets (
     treballador_id CHAR(9),
     preu_total DECIMAL(10,2),
     data_hora TIMESTAMP,
-    FOREIGN KEY (client_id) REFERENCES clients(dni),
-    FOREIGN KEY (treballador_id) REFERENCES personal(dni)
+    FOREIGN KEY (client_id) REFERENCES clients(dni) ON DELETE NO ACTION ON UPDATE CASCADE,
+    FOREIGN KEY (treballador_id) REFERENCES personal(dni) ON DELETE NO ACTION ON UPDATE CASCADE
 );
 
 -- Taula per als horaris de les cartes
@@ -61,7 +61,7 @@ CREATE TABLE inventari (
     preu DECIMAL(4,2),
     id_categoria INT,
     imatge longblob,
-    FOREIGN KEY (id_categoria) REFERENCES categoria(id)
+    FOREIGN KEY (id_categoria) REFERENCES categoria(id) ON DELETE NO ACTION ON UPDATE CASCADE
 );
 
 -- Taula per a la carta
@@ -75,8 +75,8 @@ CREATE TABLE carta_inventari_rel (
     carta_id INT,
     inventari_id INT,
     PRIMARY KEY (carta_id, inventari_id),
-    FOREIGN KEY (carta_id) REFERENCES carta(id),
-    FOREIGN KEY (inventari_id) REFERENCES inventari(id)
+    FOREIGN KEY (carta_id) REFERENCES carta(id) ON DELETE NO ACTION ON UPDATE CASCADE,
+    FOREIGN KEY (inventari_id) REFERENCES inventari(id) ON DELETE NO ACTION ON UPDATE CASCADE
 );
 
 
@@ -95,8 +95,8 @@ CREATE TABLE reserves (
     client_id CHAR(9),
     taula_id INT,
     assistencia ENUM('0', '1'),
-    FOREIGN KEY (client_id) REFERENCES clients(dni),
-    FOREIGN KEY (taula_id) REFERENCES taules(id)
+    FOREIGN KEY (client_id) REFERENCES clients(dni) ON DELETE NO ACTION ON UPDATE CASCADE,
+    FOREIGN KEY (taula_id) REFERENCES taules(id) ON DELETE NO ACTION ON UPDATE CASCADE
 );
 
 
@@ -107,7 +107,7 @@ CREATE TABLE comandes_domicili (
     temps_estimat TIME,
     valoracio_client INT,
     data_entrega TIMESTAMP,
-    FOREIGN KEY (id) REFERENCES tiquets(id)
+    FOREIGN KEY (id) REFERENCES tiquets(id) ON DELETE NO ACTION ON UPDATE CASCADE
 );
 
 
@@ -116,8 +116,8 @@ CREATE TABLE carta_horari_rel (
     carta_id INT,
     horari_id INT,
     PRIMARY KEY (carta_id, horari_id),
-    FOREIGN KEY (carta_id) REFERENCES carta(id),
-    FOREIGN KEY (horari_id) REFERENCES horari(id)
+    FOREIGN KEY (carta_id) REFERENCES carta(id) ON DELETE NO ACTION ON UPDATE CASCADE,
+    FOREIGN KEY (horari_id) REFERENCES horari(id) ON DELETE NO ACTION ON UPDATE CASCADE
 );
 
 CREATE TABLE detall_comandes (
@@ -126,8 +126,8 @@ CREATE TABLE detall_comandes (
 	quantitat_demanat INT,
 	preu DECIMAL(4,2),
 	PRIMARY KEY(id_tiquet, id_producte),
-	FOREIGN KEY (id_tiquet) REFERENCES tiquets(id),
-   	FOREIGN KEY (id_producte) REFERENCES inventari(id)
+	FOREIGN KEY (id_tiquet) REFERENCES tiquets(id) ON DELETE NO ACTION ON UPDATE CASCADE,
+   	FOREIGN KEY (id_producte) REFERENCES inventari(id) ON DELETE NO ACTION ON UPDATE CASCADE
 );
 
 -- Funciona
