@@ -1,0 +1,78 @@
+1. Multi Taula
+
+1.1Obtenir detalls dels tiquets de comandes a domicili, incloent-hi informació sobre el lliurament i la valoració del client: 
+
+SELECT cd.id AS comanda_id, cd.adreca_entrega, cd.temps_estimat,
+       cd.valoracio_client, cd.data_entrega,
+       t.preu_total, t.data_hora AS data_pedido,
+       c.nom AS nom_client, c.adreca AS adreca_client
+FROM comandes_domicili cd
+JOIN tiquets t ON cd.id = t.id
+JOIN clients c ON t.client_id = c.dni;
+
+
++--------------------------------------------------+---------------+------------------+---------------------+------------+---------------------+------------+-------------------------------+
+| comanda_id | adreca_entrega                        | temps_estimat | valoracio_client | data_entrega        | preu_total | data_pedido         | nom_client | adreca_client                 |
++------------+---------------------------------------+---------------+------------------+---------------------+------------+---------------------+------------+-------------------------------+
+|          1 | "Avinguda Meridiana 221"              | 00:35:00      | 4                | 2023-05-10 17:00:00 |      50.00 | 2024-05-23 10:00:00 | Ahmed      | 981-1367 Montes, Rd.          |
+|          2 | "Carrer de la Marina 10"              | 01:05:00      | 3                | 2023-05-11 20:00:00 |      75.00 | 2024-05-23 11:30:00 | Marshall   | 7489 Sed Rd.                  |
+|          3 | "Travessera de Gracia 300"            | 00:25:00      | 5                | 2023-05-12 11:00:00 |      60.00 | 2024-05-23 12:45:00 | Ora        | 770-6945 At Ave               |
+|          4 | "Carrer del Clot 58"                  | 00:45:00      | 4                | 2023-05-13 13:30:00 |      45.00 | 2024-05-23 13:15:00 | Cathleen   | P.O. Box 139, 4599 Mauris Av. |
+|          5 | "Carrer de Sepulveda 129"             | 01:10:00      | 3                | 2023-05-14 14:30:00 |      30.00 | 2024-05-23 14:00:00 | Ferris     | 653-4555 Sagittis. Avenue     |
+|          6 | "Avinguda Paral·lel 15"               | 00:50:00      | 2                | 2023-05-15 16:30:00 |      25.00 | 2024-05-23 14:30:00 | Kibo       | 162-9026 A Road               |
+|          7 | "Gran Via de les Corts Catalanes 900" | 01:30:00      | 1                | 2023-05-16 18:30:00 |      40.00 | 2024-05-23 15:00:00 | Logan      | Ap #465-1913 Rutrum Ave       |
+|          8 | "Carrer de la Diputacio 300"          | 00:55:00      | 3                | 2023-05-17 20:30:00 |      55.00 | 2024-05-23 15:30:00 | McKenzie   | P.O. Box 995, 2637 Non, Rd.   |
+|          9 | "Passeig de Sant Joan 150"            | 00:40:00      | 5                | 2023-05-18 10:30:00 |      70.00 | 2024-05-23 16:00:00 | Erasmus    | P.O. Box 106, 5274 Ut, Avenue |
+|         10 | "Carrer de Valencia 87"               | 01:00:00      | 4                | 2023-05-19 12:30:00 |      35.00 | 2024-05-23 16:30:00 | Raphael    | 879-2730 Primis St.           |
+|         11 | "Carrer de Roger de Lluria 54"        | 00:35:00      | 3                | 2023-05-20 14:30:00 |      20.00 | 2024-05-23 17:00:00 | Adena      | 360-9535 Aliquam Rd.          |
+|         12 | "Carrer de Casanova 88"               | 01:05:00      | 2                | 2023-05-21 16:30:00 |      65.00 | 2024-05-23 17:30:00 | Aladdin    | 3861 Ac St.                   |
++------------+---------------------------------------+---------------+------------------+---------------------+------------+---------------------+------------+-------------------------------+
+
+1.2 Obtenir informació sobre les reserves realitzades per clients, incloent-hi detalls de la reserva, client i taula assignada
+
+SELECT r.id AS reserva_id, r.quantitat_persones, r.data, r.hora,
+       c.nom AS nom_client, c.telefon AS telefon_client,
+       t.id AS taula_id, t.capacitat
+FROM reserves r
+JOIN clients c ON r.client_id = c.dni
+JOIN taules t ON r.taula_id = t.id;
+
+2. Subconsultes
+
+2.1 Mostrar les categories i el seu producte mes vennut juntament amb les ventes de cada categoria
+
+SELECT cat.nom_categoria, 
+       (SELECT nom_producte 
+        FROM inventari i 
+        WHERE i.id_categoria = cat.id 
+        ORDER BY (SELECT SUM(quantitat_demanat) 
+                  FROM detall_comandes dc 
+                  WHERE dc.id_producte = i.id) DESC 
+        LIMIT 1) AS producto_mas_vendido,
+       (SELECT SUM(quantitat_demanat) 
+        FROM detall_comandes dc 
+        JOIN inventari i ON dc.id_producte = i.id 
+        WHERE i.id_categoria = cat.id) AS ventes_categoria
+FROM categoria cat
+ORDER BY ventes_categoria DESC;
+
++-------------------+------------------------------+------------------+
+| nom_categoria     | producto_mas_vendido         | ventes_categoria |
++-------------------+------------------------------+------------------+
+| Postres           | Tiramisu                     |               15 |
+| Entrants          | Palitos de Mozzarella        |               12 |
+| Begudes           | Zumo de Naranja              |               12 |
+| Carns             | Pollo Asado                  |               10 |
+| Cafes             | Mocaccino                    |               10 |
+| Coctels           | Tequila Sunrise              |                8 |
+| Amanides          | Ensalada Cesar               |                5 |
+| Pizza             | Pizza Margherita             |                5 |
+| Hamburgueses      | Hamburguesa de Pollo         |                5 |
+| Kebab             | Kebab de Pollo               |                4 |
+| Pasta             | Espaguetis Carbonara         |                3 |
+| Marisc            | Gambas al Ajillo             |             NULL |
+| Torrades          | Tostada con Tomate           |             NULL |
+| Entrepans Calents | Bocadillo de Jamón Caliente  |             NULL |
+| Entrepans Freds   | Bocadillo de Atún            |             NULL |
+| Plats combinats   | Plato Combinado de Pollo     |             NULL |
++-------------------+------------------------------+------------------+     
