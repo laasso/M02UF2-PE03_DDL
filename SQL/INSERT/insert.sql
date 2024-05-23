@@ -168,52 +168,42 @@ IGNORE 1 LINES
 
 -- Insertar fotos LONGBLOB
 
-SET @file_content := LOAD_FILE('/var/lib/mysql-files/albondigas-ternera.jpg');
-UPDATE tabla
-SET imatge = @file_content
+UPDATE inventari
+SET imatge = LOAD_FILE('/var/lib/mysql-files/albondigas-ternera.jpg')
 WHERE id = 14;
 
-SET @file_content := LOAD_FILE('/var/lib/mysql-files/costillas-de-cerdo-al-horno.jpg');
-UPDATE tabla
-SET imatge = @file_content
+UPDATE inventari
+SET imatge = LOAD_FILE('/var/lib/mysql-files/costillas-de-cerdo-al-horno.jpg')
 WHERE id = 10;
 
-SET @file_content := LOAD_FILE('/var/lib/mysql-files/durum-pollo.jpg');
-UPDATE tabla
-SET imatge = @file_content
+UPDATE inventari
+SET imatge = LOAD_FILE('/var/lib/mysql-files/durum-pollo.jpg')
 WHERE id = 44;
 
-SET @file_content := LOAD_FILE('/var/lib/mysql-files/emplatado-final-del-lomo-de-cerdo-a-la-plancha.jpg');
-UPDATE tabla
-SET imatge = @file_content
+UPDATE inventari
+SET imatge = LOAD_FILE('/var/lib/mysql-files/emplatado-final-del-lomo-de-cerdo-a-la-plancha.jpg')
 WHERE id = 13;
 
-SET @file_content := LOAD_FILE('/var/lib/mysql-files/ensalada-cesar-casera.jpg');
-UPDATE tabla
-SET imatge = @file_content
+UPDATE inventari
+SET imatge = LOAD_FILE('/var/lib/mysql-files/ensalada-cesar-casera.jpg')
 WHERE id = 1;
 
-SET @file_content := LOAD_FILE('/var/lib/mysql-files/macarrones-con-queso-655x368.jpg');
-UPDATE tabla
-SET imatge = @file_content
+UPDATE inventari
+SET imatge = LOAD_FILE('/var/lib/mysql-files/macarrones-con-queso-655x368.jpg')
 WHERE id = 26;
 
-SET @file_content := LOAD_FILE('/var/lib/mysql-files/patatas-bravas.jpg');
-UPDATE tabla
-SET imatge = @file_content
+UPDATE inventari
+SET imatge = LOAD_FILE('/var/lib/mysql-files/patatas-bravas.jpg')
 WHERE id = 49;
 
-SET @file_content := LOAD_FILE('/var/lib/mysql-files/pizza-margarita.jpg');
-UPDATE tabla
-SET imatge = @file_content
+UPDATE inventari
+SET imatge = LOAD_FILE('/var/lib/mysql-files/pizza-margarita.jpg')
 WHERE id = 33;
 
-SET @file_content := LOAD_FILE('/var/lib/mysql-files/pizza-peperoni.jpg');
-UPDATE tabla
-SET imatge = @file_content
+UPDATE inventari
+SET imatge = LOAD_FILE('/var/lib/mysql-files/pizza-peperoni.jpg')
 WHERE id = 34;
 
-SET @file_content := LOAD_FILE('/var/lib/mysql-files/tiramisu.jpg');
-UPDATE tabla
-SET imatge = @file_content
+UPDATE inventari
+SET imatge = LOAD_FILE('/var/lib/mysql-files/tiramisu.jpg')
 WHERE id = 67;
