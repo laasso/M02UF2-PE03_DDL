@@ -129,3 +129,4 @@ CREATE TABLE detall_comandes (
    	FOREIGN KEY (id_producte) REFERENCES inventari(id)
 );
 
+-- Funciona
