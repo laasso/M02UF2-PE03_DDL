@@ -143,7 +143,7 @@ IGNORE 1 LINES
 (id_tiquet, id_producte, quantitat_demanat,preu);
 
 -- Insertar datos en tabla tiquets
-LOAD DATA LOCAL INFILE '/home/lasso/M02UF2-PE03_DDL/DATA/detall_comandes.csv'
+LOAD DATA LOCAL INFILE '/home/lasso/M02UF2-PE03_DDL/DATA/inventari_rel.csv'
 INTO TABLE carta_inventari_rel
 FIELDS TERMINATED BY ','
 LINES TERMINATED BY '\n'
