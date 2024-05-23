@@ -126,8 +126,7 @@ CREATE TABLE detall_comandes (
 	preu DECIMAL(4,2),
 	PRIMARY KEY(id_tiquet, id_producte),
 	FOREIGN KEY (id_tiquet) REFERENCES tiquets(id),
-   	FOREIGN KEY (id_producte) REFERENCES inventari(id),
-    FOREIGN KEY (preu) REFERENCES inventari(preu)
+   	FOREIGN KEY (id_producte) REFERENCES inventari(id)
 );
 
 -- Funciona
