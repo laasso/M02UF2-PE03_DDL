@@ -70,7 +70,7 @@ FROM temp_carta;
 
 -- Insertar datos en tabla horario sin repeticion
 
-CREATE TABLE horario (
+CREATE TEMPORARY TABLE horario (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nombre VARCHAR(255) UNIQUE
 );
@@ -105,3 +105,4 @@ SET hora_inici = '20:00:00', hora_fi = '01:00:00'
 WHERE nom_horari = 'nit';
 DELETE FROM horari
 WHERE id IS NULL OR nom_horari IS NULL OR hora_inici IS NULL OR hora_fi IS NULL;
+
