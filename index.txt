@@ -6,7 +6,7 @@ Els continguts avaluables per entregar estan al directori ENTREGA.
     restaurant-esquema.png
     restaurant-insert.sql
     restaurant-selects.txt
-    restauran-documentacio.pdf
+    restaurant-documentacio.pdf
 
 INFORMACIO DIRECTORIS:
 
