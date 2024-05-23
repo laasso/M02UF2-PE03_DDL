@@ -105,7 +105,7 @@ CREATE TABLE comandes_domicili (
     id INT AUTO_INCREMENT PRIMARY KEY,
     adreca_entrega VARCHAR(255),
     temps_estimat TIME,
-    valoracio_client INT,
+    valoracio_client ENUM("1","2","3","4","5"),
     data_entrega TIMESTAMP,
     FOREIGN KEY (id) REFERENCES tiquets(id) ON DELETE NO ACTION ON UPDATE CASCADE
 );

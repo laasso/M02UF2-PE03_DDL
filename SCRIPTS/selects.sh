@@ -1,7 +1,7 @@
 #!/bin/bash
 
 DB_NAME="restaurant"
-OUTPUT_FILE="SELECT/selects.txt"
+OUTPUT_FILE="../SELECT/selects.txt"
 
 # Función para ejecutar y guardar el resultado de una consulta SQL
 function ejecutar_y_guardar {
