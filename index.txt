@@ -2,11 +2,11 @@ Els continguts avaluables per entregar estan al directori ENTREGA.
 
     restaurant-consultes.txt
     restaurant-create.sql
-    restaurant-diccio.html
+    restaurant-diccio.html (https://lasso.cat/restaurant-diccio.html)
     restaurant-esquema.png
     restaurant-insert.sql
-    selects-mysql.txt
-
+    restaurant-selects.txt
+    restauran-documentacio.pdf
 
 INFORMACIO DIRECTORIS:
 
