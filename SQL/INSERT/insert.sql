@@ -91,6 +91,8 @@ CREATE TEMPORARY TABLE horario (
     nombre VARCHAR(255) UNIQUE
 );
 
+CREATE TEMPORARY TABLE horari2 LIKE horari;
+
 INSERT INTO horario (nombre)
 SELECT DISTINCT SUBSTRING_INDEX(SUBSTRING_INDEX(horari, '-', numbers.n), '-', -1) AS nombre
 FROM temp_carta
@@ -98,7 +100,7 @@ JOIN (SELECT 1 AS n UNION ALL SELECT 2 UNION ALL SELECT 3 UNION ALL SELECT 4) nu
 ON CHAR_LENGTH(horari) - CHAR_LENGTH(REPLACE(horari, '-', '')) >= numbers.n - 1;
 
 -- Para ordenar los valores y darles un ID único
-INSERT INTO horari (nom_horari)
+INSERT INTO horari2 (nom_horari)
 SELECT DISTINCT nombre
 FROM horario
 ORDER BY nombre;
@@ -106,23 +108,27 @@ ORDER BY nombre;
 -- Inserts en horari (hora_inici i hora_fi)
 
 -- Matins
-UPDATE horari
+UPDATE horari2
 SET hora_inici = '08:00:00', hora_fi = '12:00:00'
 WHERE nom_horari = 'matins';
 
 -- Migdia
-UPDATE horari
+UPDATE horari2
 SET hora_inici = '12:00:00', hora_fi = '16:00:00'
 WHERE nom_horari = 'migdia';
 
 -- Nit
-UPDATE horari
+UPDATE horari2
 SET hora_inici = '20:00:00', hora_fi = '01:00:00'
 WHERE nom_horari = 'nit';
 
 -- Borrar els registres amb camps nuls
-DELETE FROM horari
+DELETE FROM horari2
 WHERE id IS NULL OR nom_horari IS NULL OR hora_inici IS NULL OR hora_fi IS NULL;
+
+INSERT INTO horari(nom_horari, hora_inici, hora_fi)
+SELECT nom_horari, hora_inici, hora_fi
+FROM horari2;
 
 DROP TEMPORARY TABLE horario;
 DROP TEMPORARY TABLE temp_carta;
