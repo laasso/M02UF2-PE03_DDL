@@ -167,7 +167,7 @@ IGNORE 1 LINES
 (carta_id, horari_id);
 
 -- Insertar fotos LONGBLOB
-
+/*
 UPDATE inventari
 SET imatge = LOAD_FILE('/var/lib/mysql-files/albondigas-ternera.jpg')
 WHERE id = 14;
@@ -207,3 +207,4 @@ WHERE id = 34;
 UPDATE inventari
 SET imatge = LOAD_FILE('/var/lib/mysql-files/tiramisu.jpg')
 WHERE id = 67;
+*/
