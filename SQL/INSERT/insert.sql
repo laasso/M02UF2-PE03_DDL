@@ -165,3 +165,9 @@ FIELDS TERMINATED BY ','
 LINES TERMINATED BY '\n'
 IGNORE 1 LINES
 (carta_id, horari_id);
+
+-- Insertar fotos LONGBLOB
+
+UPDATE horari2
+SET hora_inici = '08:00:00', hora_fi = '12:00:00'
+WHERE nom_horari = 'matins';
