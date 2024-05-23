@@ -149,3 +149,12 @@ FIELDS TERMINATED BY ','
 LINES TERMINATED BY '\n'
 IGNORE 1 LINES
 (carta_id, inventari_id);
+
+
+-- Insertar datos en tabla tiquets
+LOAD DATA LOCAL INFILE '/home/lasso/M02UF2-PE03_DDL/DATA/horari_rel.csv'
+INTO TABLE carta_horari_rel
+FIELDS TERMINATED BY ','
+LINES TERMINATED BY '\n'
+IGNORE 1 LINES
+(carta_id, horari_id);
