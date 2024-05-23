@@ -49,7 +49,7 @@ IGNORE 1 LINES
 (id,nom_producte,estoc,preu,id_categoria);
 
 -- Crear la tabla temporal
-CREATE TABLE temp_carta (
+CREATE TEMPORARY TABLE temp_carta (
     id_carta INT,
     nom_carta VARCHAR(255),
     horari VARCHAR(255)
@@ -103,6 +103,8 @@ WHERE nom_horari = 'migdia';
 UPDATE horari
 SET hora_inici = '20:00:00', hora_fi = '01:00:00'
 WHERE nom_horari = 'nit';
+
+-- Borrar els registres amb camps nuls
 DELETE FROM horari
 WHERE id IS NULL OR nom_horari IS NULL OR hora_inici IS NULL OR hora_fi IS NULL;
 
