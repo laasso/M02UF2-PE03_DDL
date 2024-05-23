@@ -60,6 +60,7 @@ CREATE TABLE inventari (
     estoc INT,
     preu DECIMAL(4,2),
     id_categoria INT,
+    imatge longblob,
     FOREIGN KEY (id_categoria) REFERENCES categoria(id)
 );
 
