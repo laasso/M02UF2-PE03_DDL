@@ -1,4 +1,4 @@
-USE restaurant;
+1USE restaurant;
 
 -- Insert Personal
 LOAD DATA LOCAL INFILE '/home/lasso/M02UF2-PE03_DDL/DATA/personal.csv'

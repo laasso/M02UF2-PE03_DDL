@@ -1,0 +1,20 @@
+Els continguts avaluables per entregar estan al directori ENTREGA.
+
+    restaurant-consultes.txt
+    restaurant-create.sql
+    restaurant-diccio.html
+    restaurant-esquema.png
+    restaurant-insert.sql
+    selects-mysql.txt
+
+
+INFORMACIO DIRECTORIS:
+
+     DATA conte els arxius .csv
+     DUMP conte un mysqldump.
+     PICTURES les imatges introduides a la BBDD.
+     SELECT la sortida de selects de prova.
+     SQL proves i versions de cretes i inserts.
+     SCRIPTS alguns programes que hem utilitzar per fer mes senzilla el nostre fluxe de treball
+
+
