@@ -124,3 +124,5 @@ WHERE nom_horari = 'nit';
 DELETE FROM horari
 WHERE id IS NULL OR nom_horari IS NULL OR hora_inici IS NULL OR hora_fi IS NULL;
 
+DROP TEMPORARY TABLE horario;
+DROP TEMPORARY TABLE temp_carta;
