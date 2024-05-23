@@ -133,5 +133,3 @@ SELECT r.client_id, 'No assistencia a reserva pasada' AS motiu
 FROM reserves r
 JOIN clients c ON r.client_id = c.dni
 WHERE r.data < CURDATE() AND r.assistencia = '0';
-
-i
