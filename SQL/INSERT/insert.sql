@@ -66,10 +66,10 @@ IGNORE 1 LINES
 -- Insertar datos en tabla tiquets
 LOAD DATA LOCAL INFILE '/home/lasso/M02UF2-PE03_DDL/DATA/tiquets.csv'
 INTO TABLE tiquets
-FIELDS TERMINATED BY ',' 
+FIELDS TERMINATED BY ','
 LINES TERMINATED BY '\n'
 IGNORE 1 LINES
-(@dummy, client_id, treballador_id, preu_total, data_hora);
+(client_id, treballador_id, preu_total, data_hora);
 
 -- Insertar datos tabla comandes_domicili
 LOAD DATA LOCAL INFILE '/home/lasso/M02UF2-PE03_DDL/DATA/domicili.csv'
@@ -77,9 +77,7 @@ INTO TABLE comandes_domicili
 FIELDS TERMINATED BY ','
 LINES TERMINATED BY '\n'
 IGNORE 1 LINES
-(@dummy,id,adreca_entrega,temps_estimat,valoracio_client,data_entrega);
-
-
+(adreca_entrega,temps_estimat,valoracio_client,data_entrega);
 
 -- Insertar datos en la tabla carta
 INSERT INTO carta (id, nom_carta)

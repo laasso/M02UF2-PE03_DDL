@@ -1,22 +1,13 @@
-id,adreca_entrega,temps_estimat,valoracio_client,data_entrega
-1,"Carrer Major 1",01:30:00,5,2023-05-01 10:00:00
-2,"Avinguda Diagonal 123",00:45:00,4,2023-05-02 12:00:00
-3,"Carrer de Sants 45",01:00:00,3,2023-05-03 14:00:00
-4,"Carrer d'Aragó 89",00:30:00,5,2023-05-04 16:00:00
-5,"Gran Via 567",01:15:00,4,2023-05-05 18:00:00
-6,"Rambla Catalunya 32",00:50:00,2,2023-05-06 19:30:00
-7,"Passeig de Gracia 101",00:40:00,3,2023-05-07 09:00:00
-8,"Carrer de Balmes 56",01:20:00,1,2023-05-08 13:00:00
-9,"Carrer del Consell de Cent 47",00:55:00,2,2023-05-09 15:00:00
-10,"Avinguda Meridiana 221",00:35:00,4,2023-05-10 17:00:00
-11,"Carrer de la Marina 10",01:05:00,3,2023-05-11 20:00:00
-12,"Travessera de Gracia 300",00:25:00,5,2023-05-12 11:00:00
-13,"Carrer del Clot 58",00:45:00,4,2023-05-13 13:30:00
-14,"Carrer de Sepulveda 129",01:10:00,3,2023-05-14 14:30:00
-15,"Avinguda Paral·lel 15",00:50:00,2,2023-05-15 16:30:00
-16,"Gran Via de les Corts Catalanes 900",01:30:00,1,2023-05-16 18:30:00
-17,"Carrer de la Diputacio 300",00:55:00,3,2023-05-17 20:30:00
-18,"Passeig de Sant Joan 150",00:40:00,5,2023-05-18 10:30:00
-19,"Carrer de Valencia 87",01:00:00,4,2023-05-19 12:30:00
-20,"Carrer de Roger de Lluria 54",00:35:00,3,2023-05-20 14:30:00
-21,"Carrer de Casanova 88",01:05:00,2,2023-05-21 16:30:00
+adreca_entrega,temps_estimat,valoracio_client,data_entrega
+"Avinguda Meridiana 221",00:35:00,4,2023-05-10 17:00:00
+"Carrer de la Marina 10",01:05:00,3,2023-05-11 20:00:00
+"Travessera de Gracia 300",00:25:00,5,2023-05-12 11:00:00
+"Carrer del Clot 58",00:45:00,4,2023-05-13 13:30:00
+"Carrer de Sepulveda 129",01:10:00,3,2023-05-14 14:30:00
+"Avinguda Paral·lel 15",00:50:00,2,2023-05-15 16:30:00
+"Gran Via de les Corts Catalanes 900",01:30:00,1,2023-05-16 18:30:00
+"Carrer de la Diputacio 300",00:55:00,3,2023-05-17 20:30:00
+"Passeig de Sant Joan 150",00:40:00,5,2023-05-18 10:30:00
+"Carrer de Valencia 87",01:00:00,4,2023-05-19 12:30:00
+"Carrer de Roger de Lluria 54",00:35:00,3,2023-05-20 14:30:00
+"Carrer de Casanova 88",01:05:00,2,2023-05-21 16:30:00
