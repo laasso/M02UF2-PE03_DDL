@@ -85,7 +85,7 @@ Les taules de la base de dades estan definides de la següent manera:
   - `adreca`: Adreça del treballador
   - `carrec`: Càrrec del treballador
 
-![Modelo Entidad-Relación](ER.png)
+![Modelo Entidad-Relación](ENTREGA/restaurant-esquema.png)
 
 ## Instruccions d'Ús
 
