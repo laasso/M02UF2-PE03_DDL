@@ -37,7 +37,7 @@ CREATE TABLE tiquets (
     preu_total DECIMAL(10,2),
     data_hora TIMESTAMP,
     FOREIGN KEY (client_id) REFERENCES clients(dni),
-    FOREIGN KEY (treballador_id) REFERENCES personal(id)
+    FOREIGN KEY (treballador_id) REFERENCES personal(dni)
 );
 
 -- Taula per als horaris de les cartes
