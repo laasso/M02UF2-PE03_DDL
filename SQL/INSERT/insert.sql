@@ -168,6 +168,52 @@ IGNORE 1 LINES
 
 -- Insertar fotos LONGBLOB
 
-UPDATE horari2
-SET hora_inici = '08:00:00', hora_fi = '12:00:00'
-WHERE nom_horari = 'matins';
+SET @file_content := LOAD_FILE('/var/lib/mysql/restaurant/files/albondigas-ternera.jpg');
+UPDATE tabla
+SET imatge = @file_content
+WHERE id = 14;
+
+SET @file_content := LOAD_FILE('/var/lib/mysql/restaurant/files/costillas-de-cerdo-al-horno.jpg');
+UPDATE tabla
+SET imatge = @file_content
+WHERE id = 10;
+
+SET @file_content := LOAD_FILE('/var/lib/mysql/restaurant/files/durum-pollo.jpg');
+UPDATE tabla
+SET imatge = @file_content
+WHERE id = 44;
+
+SET @file_content := LOAD_FILE('/var/lib/mysql/restaurant/files/emplatado-final-del-lomo-de-cerdo-a-la-plancha.jpg');
+UPDATE tabla
+SET imatge = @file_content
+WHERE id = 13;
+
+SET @file_content := LOAD_FILE('/var/lib/mysql/restaurant/files/ensalada-cesar-casera.jpg');
+UPDATE tabla
+SET imatge = @file_content
+WHERE id = 1;
+
+SET @file_content := LOAD_FILE('/var/lib/mysql/restaurant/files/macarrones-con-queso-655x368.jpg');
+UPDATE tabla
+SET imatge = @file_content
+WHERE id = 26;
+
+SET @file_content := LOAD_FILE('/var/lib/mysql/restaurant/files/patatas-bravas.jpg');
+UPDATE tabla
+SET imatge = @file_content
+WHERE id = 49;
+
+SET @file_content := LOAD_FILE('/var/lib/mysql/restaurant/files/pizza-margarita.jpg');
+UPDATE tabla
+SET imatge = @file_content
+WHERE id = 33;
+
+SET @file_content := LOAD_FILE('/var/lib/mysql/restaurant/files/pizza-peperoni.jpg');
+UPDATE tabla
+SET imatge = @file_content
+WHERE id = 34;
+
+SET @file_content := LOAD_FILE('/var/lib/mysql/restaurant/files/tiramisu.jpg');
+UPDATE tabla
+SET imatge = @file_content
+WHERE id = 67;
