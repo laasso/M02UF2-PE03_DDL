@@ -33,7 +33,7 @@ CREATE TABLE llista_negra (
 CREATE TABLE tiquets (
     id INT AUTO_INCREMENT PRIMARY KEY,
     client_id CHAR(9),
-    treballador_id INT,
+    treballador_id CHAR(9),
     preu_total DECIMAL(10,2),
     data_hora TIMESTAMP,
     FOREIGN KEY (client_id) REFERENCES clients(dni),
