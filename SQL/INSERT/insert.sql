@@ -207,3 +207,45 @@ WHERE id = 34;
 UPDATE inventari
 SET imatge = LOAD_FILE('/var/lib/mysql-files/tiramisu.jpg')
 WHERE id = 67;
+
+-- Cambiar tamanyo de la columna para que sea visible
+
+UPDATE inventari
+SET imatge = SUBSTR(imatge, 1, 16)
+WHERE id = 14;
+
+UPDATE inventari
+SET imatge = SUBSTR(imatge, 1, 16)
+WHERE id = 10;
+
+UPDATE inventari
+SET imatge = SUBSTR(imatge, 1, 16)
+WHERE id = 44;
+
+UPDATE inventari
+SET imatge = SUBSTR(imatge, 1, 16)
+WHERE id = 13;
+
+UPDATE inventari
+SET imatge = SUBSTR(imatge, 1, 16)
+WHERE id = 1;
+
+UPDATE inventari
+SET imatge = SUBSTR(imatge, 1, 16)
+WHERE id = 26;
+
+UPDATE inventari
+SET imatge = SUBSTR(imatge, 1, 16)
+WHERE id = 49;
+
+UPDATE inventari
+SET imatge = SUBSTR(imatge, 1, 16)
+WHERE id = 33;
+
+UPDATE inventari
+SET imatge = SUBSTR(imatge, 1, 16)
+WHERE id = 34;
+
+UPDATE inventari
+SET imatge = SUBSTR(imatge, 1, 16)
+WHERE id = 67;
