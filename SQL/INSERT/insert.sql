@@ -133,3 +133,19 @@ SELECT r.client_id, 'No assistencia a reserva pasada' AS motiu
 FROM reserves r
 JOIN clients c ON r.client_id = c.dni
 WHERE r.data < CURDATE() AND r.assistencia = '0';
+
+-- Insertar datos en tabla tiquets
+LOAD DATA LOCAL INFILE '/home/lasso/M02UF2-PE03_DDL/DATA/detall_comandes.csv'
+INTO TABLE detall_comandes
+FIELDS TERMINATED BY ','
+LINES TERMINATED BY '\n'
+IGNORE 1 LINES
+(id_tiquet, id_producte, quantitat_demanat,preu);
+
+-- Insertar datos en tabla tiquets
+LOAD DATA LOCAL INFILE '/home/lasso/M02UF2-PE03_DDL/DATA/detall_comandes.csv'
+INTO TABLE carta_inventari_rel
+FIELDS TERMINATED BY ','
+LINES TERMINATED BY '\n'
+IGNORE 1 LINES
+(carta_id, inventari_id);
