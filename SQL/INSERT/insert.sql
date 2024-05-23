@@ -126,3 +126,10 @@ WHERE id IS NULL OR nom_horari IS NULL OR hora_inici IS NULL OR hora_fi IS NULL;
 
 DROP TEMPORARY TABLE horario;
 DROP TEMPORARY TABLE temp_carta;
+
+-- Inseret llista negra
+INSERT INTO llista_negra (client_id, motiu)
+SELECT r.client_id, 'No assistencia a reserva pasada' AS motiu
+FROM reserves r
+JOIN clients c ON r.client_id = c.dni
+WHERE r.data < CURDATE() AND r.assistencia = '0';
