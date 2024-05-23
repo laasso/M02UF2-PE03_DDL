@@ -131,6 +131,7 @@ SELECT nom_horari, hora_inici, hora_fi
 FROM horari2;
 
 DROP TEMPORARY TABLE horario;
+DROP TEMPORARY TABLE horari2;
 DROP TEMPORARY TABLE temp_carta;
 
 -- Inseret llista negra
