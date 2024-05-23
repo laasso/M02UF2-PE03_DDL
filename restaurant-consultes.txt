@@ -76,3 +76,48 @@ ORDER BY ventes_categoria DESC;
 | Entrepans Freds   | Bocadillo de Atún            |             NULL |
 | Plats combinats   | Plato Combinado de Pollo     |             NULL |
 +-------------------+------------------------------+------------------+     
+
+2.2 Clients que mes han gastat aquest mes
+
+SELECT c.nom, c.telefon, 
+       (SELECT SUM(preu_total) 
+        FROM tiquets t 
+        WHERE t.client_id = c.dni AND t.data_hora >= DATE_SUB(CURDATE(), INTERVAL 1 MONTH)) AS gasto_total
+FROM clients c
+ORDER BY gasto_total DESC
+LIMIT 5;
+
++----------+---------------+-------------+
+| nom      | telefon       | gasto_total |
++----------+---------------+-------------+
+| Marshall | +34 637733283 |       75.00 |
+| Erasmus  | +34 941282867 |       70.00 |
+| Chadwick | +34 977754815 |       70.00 |
+| Bert     | +34 994924371 |       70.00 |
+| Aladdin  | +34 922013586 |       65.00 |
++----------+---------------+-------------+
+
+2.3 Valoracio mitjana per categoria de producte
+
+SELECT cat.nom_categoria,
+       (SELECT AVG(valoracio_client) 
+        FROM comandes_domicili cd 
+        JOIN tiquets t ON cd.id = t.id 
+        JOIN detall_comandes dc ON t.id = dc.id_tiquet 
+        JOIN inventari i ON dc.id_producte = i.id 
+        WHERE i.id_categoria = cat.id 
+          AND valoracio_client IS NOT NULL) AS valoracion_promedio 
+FROM categoria cat
+HAVING valoracion_promedio IS NOT NULL;
+
++---------------+---------------------+
+| nom_categoria | valoracion_promedio |
++---------------+---------------------+
+| Amanides      |  3.6666666666666665 |
+| Carns         |                   4 |
+| Pasta         |                   3 |
+| Pizza         |  2.6666666666666665 |
+| Kebab         |                   1 |
+| Entrants      |   4.333333333333333 |
+| Coctels       |                   2 |
++---------------+---------------------+
